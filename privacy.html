@@ -1,106 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#5865F2">
-  <meta name="description" content="Farbot gizlilik politikası. Verilerin işlenmesi, kullanımı, korunması ve kullanıcı hakları hakkında bilgi.">
-  <title>Gizlilik Politikası | Farbot</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0b0d12;
-      --panel: #121621;
-      --text: #eef0f7;
-      --muted: #a8afc0;
-      --accent: #8b9bff;
-      --border: #292f40;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.8 system-ui, -apple-system, Segoe UI, sans-serif;
-    }
-    header {
-      padding: 54px 22px 42px;
-      border-bottom: 1px solid var(--border);
-      background: radial-gradient(ellipse at top, #252c50, var(--bg) 70%);
-    }
-    .wrap { width: min(860px, 100% - 36px); margin: auto; }
-    .tag {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.15; margin: 12px 0; }
-    .subtitle, .updated { color: var(--muted); }
-    main { padding: 34px 0 60px; }
-    section {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 25px;
-      margin: 18px 0;
-    }
-    h2 { font-size: 21px; margin: 0 0 12px; }
-    p { margin: 10px 0; }
-    a { color: var(--accent); }
-    footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      padding: 24px 0 38px;
-      font-size: 14px;
-    }
-    @media (max-width: 520px) {
-      section { padding: 19px; }
-      header { padding-top: 38px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası | Farbot</title>
+<meta name="description" content="Farbot Discord botunun kişisel verileri nasıl işleyebileceğine ilişkin Gizlilik Politikası.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0d13">
+<style>
+:root{--bg:#0a0d13;--s:#111621;--s2:#171d2a;--b:#232b3b;--t:#e8ebf2;--p:#cdd3e0;--m:#a1abc0;--a:#8da6f7;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--a);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--a);color:#0a0d13;padding:8px 14px;border-radius:6px;z-index:9}
+.skip:focus{left:8px}
+.w{max-width:880px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--b);background:linear-gradient(180deg,#131a28,var(--bg));padding:28px 0 44px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.brand{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.9rem;color:var(--t)}
+.brand:before{content:"";display:inline-block;width:10px;height:10px;margin-right:10px;background:var(--a);border-radius:2px}
+.top a{color:var(--m);font-size:.9rem}
+h1{font-size:clamp(1.9rem,5vw,2.75rem);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+.lead{color:var(--m);max-width:62ch;margin:0 0 22px}
+.meta{display:inline-block;border:1px solid var(--b);border-radius:999px;padding:4px 14px;font-size:.85rem;color:var(--m)}
+main{padding:36px 0 20px}
+.toc,.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:26px;margin-bottom:18px}
+.toc h2{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin:0 0 14px}
+.toc ol{margin:0;padding-left:26px;columns:2;column-gap:36px}
+.toc li{padding:3px 0;break-inside:avoid}
+.card h2{display:flex;gap:14px;align-items:center;font-size:1.2rem;line-height:1.35;margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--b)}
+.n{flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--b);border-radius:8px;background:var(--s2);color:var(--a);font-size:.85rem;font-weight:600}
+.card p,.card ul{margin:0 0 12px;color:var(--p)}
+.card ul{padding-left:20px}
+.card li{margin-bottom:6px}
+.card>:last-child{margin-bottom:0}
+.ph{background:#3b3114;color:#f5dd94;padding:0 5px;border-radius:4px}
+footer{border-top:1px solid var(--b);margin-top:24px;padding:36px 0 28px;color:var(--m);font-size:.92rem}
+.fg{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+footer h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px;color:var(--t)}
+footer p{margin:0 0 6px}
+.cp{border-top:1px solid var(--b);margin-top:26px;padding-top:18px;font-size:.85rem}
+@media(max-width:640px){.toc ol{columns:1}.toc,.card{padding:20px}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div class="tag">FARBOT · RESMÎ BİLGİLENDİRME</div>
-      <h1>Gizlilik Politikası</h1>
-      <p class="subtitle">Verilerinizin işlenmesi ve korunmasına ilişkin açıklamalar.</p>
-      <p class="updated">Son güncelleme: 26 Ekim 2026</p>
-    </div>
-  </header>
+<a class="skip" href="#icerik">Ana içeriğe geç</a>
+<header>
+<div class="w">
+<div class="top"><span class="brand">Farbot</span><a href="terms.html">Kullanım Koşulları</a></div>
+<h1>Gizlilik Politikası</h1>
+<p class="lead">Bu belge, Farbot Discord botunun Hizmeti sunarken hangi kişisel verileri işleyebileceğini, bunları hangi amaçlarla kullandığını ve haklarınızı açıklar.</p>
+<span class="meta">Son güncelleme: <mark class="ph">[DOLDURULACAK ALAN: GG.AA.YYYY]</mark></span>
+</div>
+</header>
+<main id="icerik" class="w">
+<nav class="toc" aria-label="İçindekiler">
+<h2>İçindekiler</h2>
+<ol>
+<li><a href="#m1">Genel Bilgilendirme ve Kapsam</a></li>
+<li><a href="#m2">İşlenebilecek Veriler</a></li>
+<li><a href="#m3">Verilerin Toplanma Yöntemleri</a></li>
+<li><a href="#m4">Verilerin İşlenme Amaçları</a></li>
+<li><a href="#m5">Verilerin Saklanması ve Silinmesi</a></li>
+<li><a href="#m6">Veri Güvenliği</a></li>
+<li><a href="#m7">Üçüncü Taraflarla Veri Paylaşımı</a></li>
+<li><a href="#m8">Kullanıcı Hakları ve Veri Talepleri</a></li>
+<li><a href="#m9">Çocukların Gizliliği ve Yaş Sınırlamaları</a></li>
+<li><a href="#m10">Politika Değişiklikleri ve İletişim</a></li>
+</ol>
+</nav>
 
-  <main class="wrap">
-    <section>
-      <h2>1. İşlenen Veriler</h2>
-      <p>Farbot, Discord platformu üzerinden çalışan bir bottur. Kullanılan komutlara ve etkinleştirilen özelliklere bağlı olarak Discord kullanıcı kimliği, sunucu ve kanal kimlikleri, rol bilgileri, komut girdileri ve botun çalışması için gerekli diğer teknik bilgiler işlenebilir.</p>
-      <p>Mesaj içerikleri, yalnızca kullanılan özelliğin çalışması için gerektiği ölçüde işlenebilir. Hangi bilgilerin kalıcı olarak saklandığı, botun etkin özelliklerine ve yapılandırmasına bağlıdır. Farbot'un erişemediği veya fiilen işlemediği verilerin toplandığı iddia edilmez.</p>
-    </section>
+<section class="card" id="m1">
+<h2><span class="n">1</span>Genel Bilgilendirme ve Kapsam</h2>
+<p>Bu Gizlilik Politikası, Farbot’un Discord sunucularında bot ve otomasyon hizmetleri sunarken kişisel verileri nasıl işleyebileceğini açıklar. Politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) ve uygulanabilir diğer mevzuat çerçevesinde hazırlanmıştır.</p>
+<p>Veri sorumlusu: <mark class="ph">[DOLDURULACAK ALAN: gerçek kişi adı veya şirket unvanı]</mark>. İletişim: <mark class="ph">[DOLDURULACAK ALAN: e-posta]</mark>.</p>
+<p>Farbot’un işleyebileceği veriler, sunucularda kullanılan özelliklere bağlıdır. Aşağıda sayılan her veri türü her kullanıcı için işlenmeyebilir. Discord’un kendi veri işleme faaliyetleri Discord’un gizlilik politikasına tabidir ve bu Politika’nın kapsamı dışındadır.</p>
+</section>
 
-    <section>
-      <h2>2. Verilerin Kullanım Amaçları</h2>
-      <p>Veriler; komutlara yanıt vermek, istenen bot özelliklerini sunmak, sunucu yöneticilerinin yapılandırdığı işlemleri yürütmek, kötüye kullanımı önlemek ve teknik sorunları incelemek amacıyla kullanılabilir.</p>
-      <p>Veriler, bu amaçlarla bağlantılı ve gerekli olan kapsamın dışında kullanılmamalıdır. Discord verileri satılmaz, reklam amacıyla veri aracılığı yapılmaz ve kullanıcıların profillerini çıkarmak için kullanılmaz.</p>
-    </section>
+<section class="card" id="m2">
+<h2><span class="n">2</span>İşlenebilecek Veriler</h2>
+<p>Farbot yalnızca Discord’un bota ilettiği ve işlevlerin gerektirdiği veriler üzerinde işlem yapabilir:</p>
+<ul>
+<li><strong>Discord kimlik verileri:</strong> kullanıcı kimliği (ID); işlevin gerektirdiği ölçüde kullanıcı adı veya görünen ad.</li>
+<li><strong>Sunucu verileri:</strong> sunucu, kanal ve rol kimlikleri ile sunucu yöneticilerinin yaptığı bot yapılandırma ayarları.</li>
+<li><strong>Komut ve etkileşim verileri:</strong> slash komutları, düğme, menü ve form etkileşimleri ile bunlara girilen parametreler.</li>
+<li><strong>Hata kayıtları ve teknik günlükler:</strong> komut adı, zaman damgası, hata mesajı ve ilgili kullanıcı veya sunucu kimliği gibi teknik bilgiler.</li>
+<li><strong>Mesaj içeriği:</strong> yalnızca bir komutun veya yapılandırılmış bir özelliğin çalışması için gerekli olduğu ölçüde. <mark class="ph">[DOLDURULACAK ALAN: Message Content yetkisinin kullanılıp kullanılmadığı ve kapsamı]</mark></li>
+<li><strong>Destek yazışmaları:</strong> destek talebinde sizin ilettiğiniz bilgiler.</li>
+</ul>
+<p>Web paneli veya harici bir sistem varsa işlenen ek veriler (ör. IP adresi, çerez, ödeme bilgisi): <mark class="ph">[DOLDURULACAK ALAN: yoksa “bulunmamaktadır” yazın]</mark>. Farbot hiçbir koşulda Discord hesap şifrenizi talep etmez. Farbot’un amacı özel nitelikli kişisel verileri işlemek değildir; ancak komutlara girilen serbest metinler bu tür bilgileri içerebileceğinden, komutlara bu verileri girmemenizi öneririz.</p>
+</section>
 
-    <section>
-      <h2>3. Saklama, Güvenlik ve Paylaşım</h2>
-      <p>Bilgiler, botun işlevini yerine getirmek için gerekli olduğu süre boyunca ve uygulanabilir yasal yükümlülükler çerçevesinde saklanır. Kalıcı olarak saklanan veriler için gereklilik ortadan kalktığında, geçerli yükümlülükler saklı kalmak üzere silme işlemi uygulanır.</p>
-      <p>Verilere yetkisiz erişimi, kaybı veya ifşayı önlemek için uygun ve makul güvenlik önlemleri alınmalıdır. Veriler, yalnızca gerekli ve hukuka uygun durumlarda; örneğin hizmet sağlayıcılarla, yasal zorunluluk kapsamında veya kullanıcının açık talebi üzerine paylaşılabilir. İnternet üzerinden hiçbir aktarım veya depolama yönteminin mutlak güvenlik garantisi vermediği unutulmamalıdır.</p>
-    </section>
+<section class="card" id="m3">
+<h2><span class="n">3</span>Verilerin Toplanma Yöntemleri</h2>
+<ul>
+<li><strong>Discord API’si:</strong> bot sunucuya eklendiğinde ve kullanıcılar botla etkileşime girdiğinde Discord’un ilettiği olaylar aracılığıyla otomatik olarak.</li>
+<li><strong>Doğrudan sizden:</strong> komutlara girdiğiniz bilgiler, sunucu yöneticilerinin yaptığı ayarlar ve destek taleplerinizde paylaştığınız bilgiler.</li>
+<li><strong>Otomatik teknik kayıtlar:</strong> Hizmetin çalışması sırasında oluşan hata ve işlem günlükleri.</li>
+</ul>
+<p>Bu sayfa çerez kullanmaz ve harici izleme betiği içermez. Sayfanın barındırıldığı platform (GitHub Pages), kendi politikaları kapsamında teknik erişim kayıtları tutabilir.</p>
+</section>
 
-    <section>
-      <h2>4. Kullanıcı Hakları ve İletişim</h2>
-      <p>Kullanıcılar, uygulanabilir mevzuat kapsamında kendileriyle ilgili veriler hakkında bilgi isteme, yanlış bilgilerin düzeltilmesini talep etme ve silinmesini isteme haklarına sahip olabilir. Talepler, Farbot geliştiricisine Discord üzerinden iletilebilir. Talebin doğrulanması gerekebilir ve yasal saklama yükümlülükleri uygulanabilir.</p>
-      <p>Farbot'un kullandığı Discord altyapısı ve Discord'un kendi veri işleme uygulamaları bu politikadan ayrıdır. Discord'un veri uygulamaları hakkında bilgi için <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discord Gizlilik Politikası</a> incelenebilir.</p>
-      <p>Bu politika, Farbot'un özellikleri veya veri işleme yöntemleri değiştiğinde güncellenebilir. Güncel sürüm bu sayfada yayımlanır.</p>
-    </section>
-  </main>
+<section class="card" id="m4">
+<h2><span class="n">4</span>Verilerin İşlenme Amaçları</h2>
+<ul>
+<li>Komutları çalıştırmak ve yapılandırılan otomasyon özelliklerini yürütmek.</li>
+<li>Sunucu ayarlarını kaydetmek ve sonraki kullanımlarda uygulamak.</li>
+<li>Teknik sorunları tespit etmek, hataları gidermek ve Hizmetin kararlılığını sürdürmek.</li>
+<li>Kötüye kullanımı, spam’i ve güvenlik risklerini önlemek.</li>
+<li>Destek taleplerini yanıtlamak ve iletişim kurmak.</li>
+<li>Hukuki yükümlülükleri yerine getirmek ve olası hukuki taleplere karşı hakları korumak.</li>
+</ul>
+<p>Hukuki sebepler (KVKK m.5): <mark class="ph">[DOLDURULACAK ALAN: gerçek uygulamaya göre sözleşmenin kurulması/ifası, meşru menfaat, hukuki yükümlülük veya açık rıza]</mark>. Verilerin reklam, profilleme veya satış amacıyla kullanılıp kullanılmadığı: <mark class="ph">[DOLDURULACAK ALAN: gerçek duruma göre belirtin]</mark>.</p>
+</section>
 
-  <footer>
-    <div class="wrap">Farbot · Gizlilik ve şeffaflık</div>
-  </footer>
+<section class="card" id="m5">
+<h2><span class="n">5</span>Verilerin Saklanması ve Silinmesi</h2>
+<p>Veriler, işlenme amacının gerektirdiği süre boyunca ve ilgili mevzuatın öngördüğü saklama yükümlülükleri çerçevesinde tutulur. Gerçek saklama süreleri:</p>
+<ul>
+<li>Sunucu yapılandırma ve etkileşim verileri: <mark class="ph">[DOLDURULACAK ALAN: süre]</mark></li>
+<li>Hata kayıtları ve teknik günlükler: <mark class="ph">[DOLDURULACAK ALAN: süre]</mark></li>
+<li>Destek yazışmaları: <mark class="ph">[DOLDURULACAK ALAN: süre]</mark></li>
+<li>Yedekler: <mark class="ph">[DOLDURULACAK ALAN: süre veya “yedek alınmamaktadır”]</mark></li>
+</ul>
+<p>Botun bir sunucudan çıkarılması hâlinde o sunucuya ait verilerin akıbeti: <mark class="ph">[DOLDURULACAK ALAN: silme süreci ve süresi]</mark>. Silme taleplerinizi 8. maddede belirtilen yöntemle iletebilirsiniz. Mevzuat gereği saklanması zorunlu veriler bu kapsamın dışındadır.</p>
+</section>
+
+<section class="card" id="m6">
+<h2><span class="n">6</span>Veri Güvenliği</h2>
+<p>Farbot, işlenen verileri yetkisiz erişime, kayba ve kötüye kullanıma karşı korumak için makul teknik ve idari tedbirler almayı hedefler. Fiilen uygulanan tedbirler: <mark class="ph">[DOLDURULACAK ALAN: erişim kontrolü, bot token yönetimi, şifreleme, yedekleme vb. yalnızca gerçekte uygulananlar]</mark>.</p>
+<p>İnternet üzerinden iletim veya elektronik saklama yöntemlerinin hiçbiri mutlak güvenlik sağlamaz. Bir veri ihlali meydana gelirse, ilgili mevzuatta öngörülen bildirim yükümlülüklerine uygun hareket edilir. Sunucu yöneticilerinin de botun yetkilerini dikkatle yönetmesi ve hesap güvenliğini sağlaması beklenir. Güvenlik açıklarını ilgili iletişim bilgileri üzerinden bildirebilirsiniz.</p>
+</section>
+
+<section class="card" id="m7">
+<h2><span class="n">7</span>Üçüncü Taraflarla Veri Paylaşımı</h2>
+<ul>
+<li><strong>Discord:</strong> Farbot Discord üzerinden çalıştığından, platform üzerinden iletilen veriler Discord’un kendi sorumluluğundadır.</li>
+<li><strong>Hizmet sağlayıcılar:</strong> barındırma, veritabanı, izleme veya destek altyapısı sağlayan taraflar: <mark class="ph">[DOLDURULACAK ALAN: sağlayıcı adları ve rolleri; yoksa belirtin]</mark>.</li>
+<li><strong>Yetkili merciler:</strong> yürürlükteki mevzuat gereği yasal bir talep olması hâlinde, hukuken zorunlu ölçüde.</li>
+</ul>
+<p>Verilerin yurt dışına aktarılıp aktarılmadığı ve sunucu konumu: <mark class="ph">[DOLDURULACAK ALAN: ülke/bölge; aktarım varsa KVKK m.9 kapsamındaki dayanak]</mark>. Kişisel verilerin üçüncü taraflara satılıp satılmadığı veya reklam amacıyla paylaşılıp paylaşılmadığı: <mark class="ph">[DOLDURULACAK ALAN: gerçek duruma göre belirtin]</mark>.</p>
+</section>
+
+<section class="card" id="m8">
+<h2><span class="n">8</span>Kullanıcı Hakları ve Veri Talepleri</h2>
+<p>KVKK’nın 11. maddesi kapsamında veri sorumlusuna başvurarak aşağıdaki haklarınızı kullanabilirsiniz:</p>
+<ul>
+<li>Kişisel verilerinizin işlenip işlenmediğini öğrenme ve işlenmişse buna ilişkin bilgi talep etme.</li>
+<li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme.</li>
+<li>Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme.</li>
+<li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme.</li>
+<li>Mevzuatta öngörülen şartlar çerçevesinde verilerin silinmesini veya yok edilmesini isteme ve bunun aktarılan üçüncü kişilere bildirilmesini talep etme.</li>
+<li>Otomatik sistemlerle analiz sonucu aleyhinize bir sonuç doğmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+</ul>
+<p>Başvurular <mark class="ph">[DOLDURULACAK ALAN: başvuru e-postası veya yöntemi]</mark> üzerinden iletilebilir. Kimliğinizi doğrulamak için Discord kullanıcı kimliğiniz ve ilgili sunucu kimliği gibi bilgiler talep edilebilir. Talepler, mevzuatta öngörülen süre içinde sonuçlandırılır. Discord’un kendi tuttuğu veriler için doğrudan Discord’a başvurmanız gerekir. Yanıttan memnun kalmamanız hâlinde Kişisel Verileri Koruma Kurulu’na başvurma hakkınız saklıdır.</p>
+</section>
+
+<section class="card" id="m9">
+<h2><span class="n">9</span>Çocukların Gizliliği ve Yaş Sınırlamaları</h2>
+<p>Farbot, Discord’un getirdiği asgari yaş koşulunu karşılamayan kişilere yönelik değildir ve bu kişilerden bilerek kişisel veri toplamaz. Hizmetin kullanıcı yaşını doğrulayıp doğrulamadığı: <mark class="ph">[DOLDURULACAK ALAN: gerçek uygulamaya göre belirtin]</mark>.</p>
+<p>Yaş sınırının altındaki bir kişiye ait verilerin işlendiğini düşünüyorsanız veya veli ya da vasi olarak bir talepte bulunmak istiyorsanız, iletişim bilgileri üzerinden bize ulaşabilirsiniz. Bu tür bir durumun tespiti hâlinde ilgili veriler uygun şekilde değerlendirilir ve gerekli görüldüğünde silinir.</p>
+</section>
+
+<section class="card" id="m10">
+<h2><span class="n">10</span>Politika Değişiklikleri ve İletişim</h2>
+<p>Bu Politika, Hizmetteki, mevzuattaki veya veri işleme uygulamalarındaki değişikliklere bağlı olarak güncellenebilir. Güncel sürümün yürürlük tarihi sayfanın üst bölümünde yer alır. Önemli değişiklikler <mark class="ph">[DOLDURULACAK ALAN: duyuru yöntemi]</mark> aracılığıyla duyurulur.</p>
+<p>Gizlilik ile ilgili soru, talep ve bildirimleriniz için:</p>
+<ul>
+<li>Veri sorumlusu: <mark class="ph">[DOLDURULACAK ALAN: ad/unvan]</mark></li>
+<li>E-posta: <mark class="ph">[DOLDURULACAK ALAN: e-posta]</mark></li>
+<li>Destek sunucusu: <mark class="ph">[DOLDURULACAK ALAN: davet bağlantısı]</mark></li>
+<li>Adres (varsa): <mark class="ph">[DOLDURULACAK ALAN: adres veya “yoktur”]</mark></li>
+</ul>
+</section>
+</main>
+
+<footer>
+<div class="w">
+<div class="fg">
+<div><span class="brand">Farbot</span><p style="margin-top:10px">Discord sunucuları için bot hizmetleri ve otomasyon çözümleri.</p></div>
+<div><h3>Yasal</h3><p><a href="terms.html">Kullanım Koşulları</a></p></div>
+<div><h3>İletişim</h3><p><mark class="ph">[DOLDURULACAK ALAN: e-posta]</mark></p><p><mark class="ph">[DOLDURULACAK ALAN: destek sunucusu]</mark></p></div>
+</div>
+<p class="cp">© Farbot. Tüm hakları saklıdır. Farbot, Discord Inc. ile bağlantılı değildir.</p>
+</div>
+</footer>
 </body>
 </html>
