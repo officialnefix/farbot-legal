@@ -1,127 +1,1393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kullanım Koşulları | Farbot</title>
-<meta name="description" content="Farbot Discord moderasyon botunun kullanım koşulları: yetki, sorumluluk, kabul edilebilir kullanım ve hizmet şartları.">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%232f4b8f%27/%3E%3Cpath d=%27M10 9h13v4h-8v3h7v4h-7v4h-5z%27 fill=%27white%27/%3E%3C/svg%3E">
-<style>
-:root{--bg:#f7f8fa;--ink:#16202e;--mut:#556070;--rule:#d7dce5;--acc:#2f4b8f;--box:#eceff6;color-scheme:light dark}
-@media(prefers-color-scheme:dark){:root{--bg:#0f141c;--ink:#e6eaf1;--mut:#9aa6b8;--rule:#263041;--acc:#93aaf0;--box:#161d29}}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.8 Georgia,"Iowan Old Style","Source Serif 4",serif;-webkit-text-size-adjust:100%}
-header,nav,footer,h1,h2,th,.meta,.toc{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--acc);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--bg);padding:8px 14px;border-radius:6px}
-.skip:focus{left:8px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid var(--rule)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.brand{font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
-nav a{margin-left:20px;color:var(--mut);text-decoration:none;font-size:.95rem}
-nav a[aria-current]{color:var(--ink);font-weight:600;border-bottom:2px solid var(--acc);padding-bottom:3px}
-.hero{padding:48px 0 8px}
-h1{font-size:clamp(1.9rem,4.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
-.meta{color:var(--mut);font-size:.92rem;margin:0}
-.page{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;padding:32px 0 72px}
-.toc{position:sticky;top:24px;align-self:start;font-size:.92rem}
-.toc p{margin:0 0 8px;font-weight:600}
-.toc ol{margin:0;padding:0;list-style:none;border-left:1px solid var(--rule)}
-.toc a{display:block;padding:5px 0 5px 14px;color:var(--mut);text-decoration:none}
-.toc a:hover{color:var(--acc)}
-article{max-width:760px}
-article>p,article>ul{max-width:70ch}
-.summary{background:var(--box);border-left:4px solid var(--acc);padding:18px 22px;margin:0 0 40px;border-radius:0 8px 8px 0}
-.summary h2{margin:0 0 8px;font-size:1.05rem}
-.summary ul{margin:0;padding-left:20px}
-h2{font-size:1.3rem;line-height:1.3;margin:44px 0 12px;padding-top:24px;border-top:1px solid var(--rule)}
-h2:first-of-type{margin-top:0}
-.summary h2{border:0;padding:0}
-p,ul,ol.l{margin:0 0 14px}
-li{margin-bottom:6px}
-.tw{overflow-x:auto;margin:0 0 18px;border:1px solid var(--rule);border-radius:8px}
-table{width:100%;border-collapse:collapse;font:.93rem/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-width:560px}
-code{overflow-wrap:anywhere}
-th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--rule)}
-th{background:var(--box);font-weight:600}
-tr:last-child td{border-bottom:0}
-footer{border-top:1px solid var(--rule);color:var(--mut);font-size:.9rem;padding:28px 0 40px}
-footer p{margin:0 0 6px}
-@media(max-width:860px){.page{grid-template-columns:minmax(0,1fr);gap:24px}.toc{position:static}}
-@media print{header,.toc,.skip{display:none}body{background:#fff;color:#000;font-size:11pt}a{color:#000}.page{display:block}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Farbot Kullanım Koşulları — yetki, sorumluluk, kabul edilebilir kullanım ve hizmet şartları.">
+  <title>Kullanım Koşulları — Farbot</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23101113'/%3E%3Cpath d='M18 14h30v9H27v8h18v9H27v10h-9z' fill='%23deded7'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101113;
+      --surface: #17181a;
+      --surface-soft: rgba(225,225,215,.035);
+      --text: #e2e2dc;
+      --muted: #aaa9a2;
+      --quiet: #85847e;
+      --line: rgba(225,225,215,.11);
+      --accent: #c9c9c1;
+      --max: 1320px;
+      --sans: "Manrope", Inter, ui-sans-serif, system-ui, sans-serif;
+      --mono: "DM Mono", ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--text);
+      background: var(--bg);
+      font-family: var(--sans);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+      color: #17181a;
+      background: #d0d0c8;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #c9c9c1;
+      outline-offset: 4px;
+    }
+
+    /* Hareketli arka plan */
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background: var(--bg);
+    }
+
+    .ambient::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      opacity: .2;
+      background: conic-gradient(
+        from 30deg at 50% 50%,
+        transparent 0 12%,
+        rgba(225,225,215,.07) 18%,
+        transparent 31%,
+        rgba(225,225,215,.035) 48%,
+        transparent 67%,
+        rgba(225,225,215,.05) 83%,
+        transparent 100%
+      );
+      filter: blur(130px);
+      animation: turn 90s linear infinite;
+    }
+
+    .mist {
+      position: absolute;
+      width: 54vw;
+      height: 54vw;
+      min-width: 340px;
+      min-height: 340px;
+      border-radius: 50%;
+      filter: blur(125px);
+      opacity: .7;
+    }
+
+    .mist-a {
+      top: -30%;
+      left: -20%;
+      background: radial-gradient(
+        circle,
+        rgba(225,225,215,.12),
+        transparent 68%
+      );
+      animation: floatA 48s ease-in-out infinite alternate;
+    }
+
+    .mist-b {
+      top: 10%;
+      right: -28%;
+      width: 62vw;
+      height: 62vw;
+      background: radial-gradient(
+        circle,
+        rgba(190,190,183,.09),
+        transparent 70%
+      );
+      animation: floatB 58s ease-in-out infinite alternate;
+    }
+
+    .mist-c {
+      bottom: -48%;
+      left: 15%;
+      width: 65vw;
+      height: 65vw;
+      background: radial-gradient(
+        circle,
+        rgba(225,225,215,.075),
+        transparent 70%
+      );
+      animation: floatC 66s ease-in-out infinite alternate;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+    }
+
+    .header,
+    main,
+    .footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 40;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      opacity: .8;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    /* Üst menü */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(16,17,19,.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      font-size: .95rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(225,225,215,.45);
+      border-radius: 11px;
+      color: #191a1c;
+      background: #d2d2ca;
+      font-size: 16px;
+      letter-spacing: -.08em;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: -4px;
+      color: var(--quiet);
+      font: 9px/1.2 var(--mono);
+      letter-spacing: .18em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav a {
+      padding: 9px 13px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .nav a:hover,
+    .nav a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(225,225,215,.045);
+      border-color: var(--line);
+    }
+
+    .nav a[aria-current="page"]::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin: 0 8px 2px 0;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .skip {
+      position: absolute;
+      top: 8px;
+      left: -999px;
+      z-index: 60;
+      padding: 9px 14px;
+      color: #17181a;
+      background: #d2d2ca;
+      border-radius: 8px;
+    }
+
+    .skip:focus { left: 12px; }
+
+    /* Giriş alanı */
+
+    .hero {
+      padding: clamp(72px, 10vw, 132px) 0 58px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font: 10px/1.5 var(--mono);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: #aaa99f;
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin: 22px 0 20px;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      line-height: .98;
+      letter-spacing: -.085em;
+      font-weight: 800;
+    }
+
+    h1 span {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(220,220,210,.48);
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 26px;
+      max-width: 1000px;
+    }
+
+    .hero-copy {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(.96rem, 1.4vw, 1.08rem);
+    }
+
+    .hero-meta {
+      flex: 0 0 auto;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      color: var(--quiet);
+      font: 9px/1.8 var(--mono);
+      letter-spacing: .08em;
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--text);
+      font: 500 12px/1.8 var(--mono);
+    }
+
+    .hero-rule {
+      height: 1px;
+      margin-top: 52px;
+      background: linear-gradient(
+        90deg,
+        rgba(220,220,210,.28),
+        rgba(220,220,210,.045) 68%,
+        transparent
+      );
+    }
+
+    /* Bilgi kartları */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 0 0 48px;
+    }
+
+    .stat {
+      min-height: 98px;
+      padding: 17px 19px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(
+        135deg,
+        rgba(225,225,215,.045),
+        rgba(225,225,215,.012)
+      );
+    }
+
+    .stat-label {
+      display: block;
+      color: var(--quiet);
+      font: 9px/1.5 var(--mono);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      display: block;
+      margin-top: 7px;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+
+    /* İçindekiler ve sayfa düzeni */
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(26px, 4.5vw, 68px);
+      padding-bottom: 100px;
+    }
+
+    .toc-wrap {
+      position: sticky;
+      top: 96px;
+    }
+
+    .toc {
+      padding: 20px 16px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(23,24,26,.82);
+      backdrop-filter: blur(14px);
+    }
+
+    .toc-title {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .toc-title span {
+      color: var(--quiet);
+      font: 9px var(--mono);
+    }
+
+    .toc ol {
+      display: grid;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc a {
+      display: flex;
+      gap: 10px;
+      padding: 7px 9px;
+      border-left: 1px solid var(--line);
+      color: #999890;
+      text-decoration: none;
+      font-size: .75rem;
+      line-height: 1.5;
+      transition: .2s ease;
+    }
+
+    .toc a b {
+      color: var(--quiet);
+      font: 9px var(--mono);
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: var(--text);
+      border-left-color: #bdbdb5;
+      background: linear-gradient(
+        90deg,
+        rgba(225,225,215,.045),
+        transparent
+      );
+    }
+
+    .toc a.active b { color: var(--text); }
+
+    .toc-foot {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 16px 4px 0;
+      padding-top: 13px;
+      border-top: 1px solid var(--line);
+      color: var(--quiet);
+      font: 8px var(--mono);
+      letter-spacing: .08em;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #aaa99f;
+    }
+
+    /* Metin alanı */
+
+    article { min-width: 0; }
+
+    .summary {
+      margin: 0 0 30px;
+      padding: clamp(22px, 3.5vw, 34px);
+      border: 1px solid rgba(225,225,215,.13);
+      border-radius: 19px;
+      background: linear-gradient(
+        135deg,
+        rgba(225,225,215,.065),
+        rgba(225,225,215,.018)
+      );
+    }
+
+    .summary-kicker {
+      margin: 0 0 9px;
+      color: var(--quiet);
+      font: 9px var(--mono);
+      letter-spacing: .16em;
+    }
+
+    .summary h2 {
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: clamp(1.35rem, 2vw, 1.7rem);
+      line-height: 1.25;
+      letter-spacing: -.05em;
+    }
+
+    .summary ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary li {
+      position: relative;
+      padding-left: 16px;
+      color: #bdbcb5;
+      font-size: .86rem;
+      line-height: 1.75;
+    }
+
+    .summary li::before {
+      content: "";
+      position: absolute;
+      top: .78em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #aaa99f;
+    }
+
+    article a {
+      color: #d4d4cc;
+      text-decoration-color: rgba(212,212,204,.35);
+    }
+
+    article a:hover {
+      text-decoration-color: #d4d4cc;
+    }
+
+    article > h2 {
+      position: relative;
+      margin: 44px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--text);
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.3;
+      letter-spacing: -.05em;
+      scroll-margin-top: 108px;
+    }
+
+    article > h2::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 48px;
+      height: 1px;
+      background: #aaa99f;
+    }
+
+    article > p,
+    article > ul {
+      max-width: 78ch;
+      color: #b8b7b0;
+      font-size: .91rem;
+      line-height: 1.9;
+    }
+
+    article > p { margin: 0 0 14px; }
+
+    article > ul {
+      margin: 0 0 18px;
+      padding-left: 1.2rem;
+    }
+
+    article li {
+      margin: 0 0 8px;
+      padding-left: 3px;
+    }
+
+    article li::marker { color: #aaa99f; }
+
+    strong {
+      color: #e0e0da;
+      font-weight: 800;
+    }
+
+    code {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      color: #e0e0da;
+      background: rgba(225,225,215,.045);
+      font: .84em var(--mono);
+      overflow-wrap: anywhere;
+    }
+
+    /* Alt alan */
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: rgba(0,0,0,.12);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 25px 0 30px;
+      color: var(--quiet);
+      font-size: .72rem;
+    }
+
+    .footer-brand {
+      color: #deded8;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 25;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--text);
+      background: rgba(23,24,26,.86);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: .2s ease;
+      cursor: pointer;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Animasyonlar */
+
+    @keyframes turn {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes floatA {
+      from { transform: translate(-3vw, -2vh) scale(.94); }
+      to { transform: translate(18vw, 17vh) scale(1.08); }
+    }
+
+    @keyframes floatB {
+      from { transform: translate(3vw, -5vh) scale(1.02); }
+      to { transform: translate(-19vw, 13vh) scale(.92); }
+    }
+
+    @keyframes floatC {
+      from { transform: translate(10vw, 5vh) scale(.9); }
+      to { transform: translate(-12vw, -15vh) scale(1.08); }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 880px) {
+      .shell {
+        width: min(calc(100% - 40px), var(--max));
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .toc-wrap { position: static; }
+      .toc ol { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Mobil */
+
+    @media (max-width: 600px) {
+      .shell { width: calc(100% - 30px); }
+
+      .header-inner {
+        min-height: 66px;
+        gap: 8px;
+      }
+
+      .brand {
+        gap: 8px;
+        font-size: .82rem;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+      }
+
+      .nav { gap: 1px; }
+
+      .nav a {
+        padding: 7px 8px;
+        font-size: .64rem;
+      }
+
+      .nav a[aria-current="page"]::before {
+        width: 4px;
+        height: 4px;
+        margin-right: 5px;
+      }
+
+      .hero { padding: 66px 0 42px; }
+
+      h1 { font-size: clamp(3rem, 16vw, 5rem); }
+
+      .hero-bottom {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .hero-meta { width: 100%; }
+      .hero-rule { margin-top: 35px; }
+
+      .stats {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-bottom: 30px;
+      }
+
+      .stat {
+        min-height: auto;
+        padding: 13px 15px;
+      }
+
+      .stat-value { margin-top: 3px; }
+      .toc ol, .summary ul { grid-template-columns: 1fr; }
+      .summary { border-radius: 16px; }
+      article > h2 { margin-top: 36px; }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .back-top {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    /* Hareket hassasiyeti */
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Yazdırma */
+
+    @media print {
+      .ambient,
+      .grain,
+      .progress,
+      .header,
+      .toc-wrap,
+      .back-top {
+        display: none !important;
+      }
+
+      body {
+        color: #111;
+        background: #fff;
+      }
+
+      .shell { width: 100%; }
+      .hero { padding: 24px 0; }
+
+      h1,
+      h1 span,
+      article > h2,
+      strong {
+        color: #111;
+        -webkit-text-stroke: 0;
+      }
+
+      .hero-copy,
+      article > p,
+      article > ul {
+        color: #333;
+      }
+
+      .layout {
+        display: block;
+        padding-bottom: 0;
+      }
+
+      .summary,
+      .stat {
+        color: #111;
+        background: #fff;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .summary li { color: #222; }
+      .footer { background: #fff; }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip" href="#icerik">Ana içeriğe geç</a>
-<header><div class="wrap"><a class="brand" href="privacy.html">Farbot</a>
-<nav aria-label="Yasal belgeler"><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html" aria-current="page">Kullanım Koşulları</a></nav></div></header>
-<main class="wrap" id="icerik">
-<div class="hero"><h1>Kullanım Koşulları</h1><p class="meta">Yürürlük ve son güncelleme tarihi: 4 Kasım 2026</p></div>
-<div class="page">
-<nav class="toc" aria-label="İçindekiler"><p>İçindekiler</p><ol>
-<li><a href="#k1">Kabul ve kapsam</a></li><li><a href="#k2">Hizmet</a></li><li><a href="#k3">Yetki ve sorumluluk</a></li>
-<li><a href="#k4">Kabul edilebilir kullanım</a></li><li><a href="#k5">Sunucu yöneticilerinin yükümlülükleri</a></li><li><a href="#k6">Veriler</a></li>
-<li><a href="#k7">Erişimin kısıtlanması</a></li><li><a href="#k8">Garanti reddi</a></li><li><a href="#k9">Sorumluluğun sınırı</a></li><li><a href="#k10">Değişiklikler, hukuk ve iletişim</a></li></ol></nav>
-<article>
-<section class="summary"><h2>Kısaca</h2><ul>
-<li>Farbot bir araçtır: uyarı, at ve yasak kararlarını <strong>sunucu yetkilileri</strong> verir ve bunlardan onlar sorumludur.</li>
-<li>Botu kötüye kullanmak veya başkalarını taciz etmek için kullanmak yasaktır.</li>
-<li>Hizmet ücretsiz ve "olduğu gibi" sunulur; kesinti olabilir.</li>
-<li>Veri işleme kuralları <a href="privacy.html">Gizlilik Politikası</a>'ndadır.</li></ul></section>
 
-<h2 id="k1">1. Kabul ve kapsam</h2>
-<p>Farbot'u bir sunucuya ekleyerek veya komutlarını kullanarak bu koşulları kabul etmiş olursunuz. Farbot'u kullanırken ayrıca Discord'un <a href="https://discord.com/terms">Hizmet Şartları</a>'na, <a href="https://discord.com/guidelines">Topluluk Yönergeleri</a>'ne ve Geliştirici Politikası'na uymanız gerekir. Koşulları kabul etmiyorsanız botu kullanmayın veya sunucunuzdan çıkarın.</p>
-<p>Hizmeti kullanabilmek için bağlayıcı sözleşme yapabilecek hukuki ehliyete sahip olmanız ve Discord'un asgari yaş şartını karşılamanız gerekir. Botu bir sunucuya ekleyen kişi, o sunucu adına işlem yapmaya yetkili olduğunu kabul eder.</p>
+  <div class="ambient" aria-hidden="true">
+    <div class="mist mist-a"></div>
+    <div class="mist mist-b"></div>
+    <div class="mist mist-c"></div>
+  </div>
 
-<h2 id="k2">2. Hizmet</h2>
-<p>Farbot, Discord sunucuları için şu işlevleri sunan bir moderasyon botudur: kullanıcı sorgulama (<code>/sorgu</code>, <code>/profil-sorgu</code>), dereceli uyarı ve moderatör notları, üye atma ve yasaklama (süreli yasak dahil) ve bunların vaka olarak kaydı, mod-log, etiket koruması ve sunucu ayarları. Komutların tam listesi <code>/yardim</code> ile görüntülenir. Tüm özellikler sunucu yöneticileri için ücretsizdir; ücretli bir bölüm sunulursa koşulları ayrıca duyurulur. Özellikler önceden bildirilerek veya bildirilmeden değiştirilebilir ya da kaldırılabilir.</p>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-<h2 id="k3">3. Yetki ve sorumluluk</h2>
-<ul>
-<li>Komutlar, Discord'da ilgili yetkiye sahip kişilere açıktır (ör. Üyeleri At, Üyeleri Yasakla, Üyelere Zaman Aşımı Uygula, Sunucuyu Yönet). Bu yetkilerin kimlere verileceğine sunucu yönetimi karar verir.</li>
-<li>Uyarı, zaman aşımı, at ve yasak kararlarını yetkililer verir; Farbot bu kararları kendiliğinden vermez. Kararların doğruluğundan, gerekçesinden ve sonuçlarından bu kararı veren yetkili ve sunucu yönetimi sorumludur.</li>
-<li>At ve yasak işlemleri bir kullanıcıyı sunucudan uzaklaştırır; Farbot onay adımı sunsa da bu işlemlerin yanlış uygulanmasından doğan sonuçlar bot sahibine yüklenemez.</li>
-<li>Bir karara itiraz etmek isteyen kullanıcı, öncelikle kararı veren sunucu yönetimine başvurmalıdır. Bot sahibi sunucuların iç kararlarında taraf değildir.</li></ul>
+  <a class="skip" href="#icerik">Ana içeriğe geç</a>
 
-<h2 id="k4">4. Kabul edilebilir kullanım</h2>
-<p>Aşağıdakiler yasaktır:</p>
-<ul>
-<li>Botu hukuka, Discord kurallarına veya üçüncü kişilerin haklarına aykırı amaçlarla kullanmak.</li>
-<li>Uyarı, at, yasak veya sorgu komutlarını taciz, ayrımcılık, misilleme ya da haksız yere cezalandırma amacıyla kullanmak.</li>
-<li>Komut parametrelerine hakaret, tehdit, hukuka aykırı veya başkalarının kişisel verilerini (ör. kimlik, adres, telefon) içeren metinler yazmak.</li>
-<li>Botu otomatik veya toplu isteklerle zorlamak, bekleme sürelerini ve yetki denetimlerini aşmaya çalışmak; altyapıya, kaynak koda veya başkalarının verilerine yetkisiz erişmeye çalışmak ve güvenlik açıklarını kötüye kullanmak.</li>
-<li>Hizmeti yetkisiz biçimde ticari amaçla yeniden sunmak veya üçüncü kişilerin kişisel verilerini hukuka aykırı biçimde toplamak ya da izlemek için kullanmak.</li>
-<li>Botun adını veya görünümünü taklit ederek başkalarını yanıltmak.</li></ul>
+  <header class="header">
+    <div class="shell header-inner">
 
-<h2 id="k5">5. Sunucu yöneticilerinin yükümlülükleri</h2>
-<ul>
-<li>Botu ekleyen ve yapılandıran yönetici, üyelerine moderasyon kayıtlarının tutulduğunu ve <a href="privacy.html">Gizlilik Politikası</a>'nı bildirmekle yükümlüdür.</li>
-<li>Yönetici, yetkililerinin Farbot'u yürürlükteki mevzuata ve bu koşullara uygun kullanmasını sağlar, yetkileri ve rol sıralamasını dikkatle yönetir.</li>
-<li>Botun düzgün çalışması için ihtiyaç duyduğu yetkilerin (ör. Mesajları Yönet, Üyeleri At/Yasakla) verilmesi ve bot rolünün yönetilen üyelerin rollerinin üstünde olması yöneticinin sorumluluğundadır.</li>
-<li>Yönetici, etkinlik takibi ve etiket koruması gibi özellikleri sunucusunun ihtiyacına göre açar veya kapatır.</li></ul>
+      <a class="brand" href="privacy.html" aria-label="Farbot ana sayfa">
+        <span class="brand-mark" aria-hidden="true">F.</span>
+        <span>
+          FARBOT
+          <small>SECURITY &amp; MODERATION</small>
+        </span>
+      </a>
 
-<h2 id="k6">6. Veriler</h2>
-<p>Farbot'un hangi verileri işlediği, ne kadar süre sakladığı ve haklarınız <a href="privacy.html">Gizlilik Politikası</a>'nda açıklanmıştır. Politika bu koşulların ayrılmaz parçasıdır. Bir güvenlik açığı tespit ederseniz bunu bu sayfanın sonundaki iletişim bilgileriyle bildirmenizi rica ederiz.</p>
+      <nav class="nav" aria-label="Yasal belgeler">
+        <a href="privacy.html">Gizlilik Politikası</a>
+        <a href="terms.html" aria-current="page">Kullanım Koşulları</a>
+      </nav>
 
-<h2 id="k7">7. Erişimin kısıtlanması</h2>
-<p>Bot sahibi; bu koşulların, Discord kurallarının veya hukukun ihlali, kötüye kullanım ya da altyapıya zarar verme durumunda bir kullanıcının veya sunucunun Farbot'a erişimini önceden bildirmeden kısıtlayabilir veya sonlandırabilir. Sunucu yönetimi botu istediği zaman sunucusundan çıkarabilir; çıkarılan sunucunun verilerinin akıbeti Gizlilik Politikası'ndadır.</p>
+    </div>
+  </header>
 
-<h2 id="k8">8. Garanti reddi</h2>
-<p>Farbot ücretsiz ve "olduğu gibi" sunulur. Kesintisiz, hatasız veya belirli bir süre içinde çalışacağına dair garanti verilmez. Barındırma, Discord altyapısı veya bakım nedenleriyle kesintiler yaşanabilir; bu durumda komutlar çalışmayabilir ve süreli yasakların kaldırılması bot yeniden açılana kadar gecikebilir. Veriler düzenli yedeklenir ancak kaybolmayacağı garanti edilmez; önemli kararlarınız için kendi kayıtlarınızı da tutmanız önerilir.</p>
-<p>Farbot Discord API'si üzerinden çalışır ve Discord'un işleyişine bağımlıdır; Discord'daki kesintiler, API değişiklikleri veya kısıtlamalar Hizmeti kısmen ya da tamamen etkileyebilir. Hizmet, Wispbyte barındırma altyapısında çalışır. Discord ve barındırma sağlayıcısının hizmetleri kendi koşullarına tabidir ve Farbot bunların içeriğinden sorumlu değildir.</p>
+  <main class="shell" id="icerik">
 
-<h2 id="k9">9. Sorumluluğun sınırı</h2>
-<p>Yürürlükteki mevzuatın izin verdiği ölçüde, bot sahibi Hizmetin kullanımından veya kullanılamamasından doğan dolaylı zararlardan, kâr ve veri kaybından, yetkililerin verdiği kararlardan ve Discord veya barındırma sağlayıcısından kaynaklanan kesintilerden sorumlu tutulamaz. Kasıt ve ağır kusur hâlleri ile mevzuatın sınırlandırılmasına izin vermediği sorumluluklar bu sınırın dışındadır.</p>
+    <section class="hero reveal">
 
-<h2 id="k10">10. Değişiklikler, hukuk ve iletişim</h2>
-<p>Koşullar güncellenebilir. Güncel sürüm bu sayfadadır ve yürürlük tarihi sayfanın başında yazar; önemli değişiklikler destek sunucusunda duyurulur. Değişiklikten sonra botu kullanmaya devam etmeniz yeni koşulları kabul ettiğiniz anlamına gelir. Bu koşullara Türkiye Cumhuriyeti hukuku uygulanır; tüketici mevzuatından doğan zorunlu haklarınız ve yetki kuralları saklıdır.</p>
-<ul><li>Bot sahibi: Nefix</li><li>E-posta: <a href="mailto:officialnefix@gmail.com">officialnefix@gmail.com</a></li><li>Destek sunucusu: <a href="https://discord.gg/WU86GBBxXX">discord.gg/WU86GBBxXX</a></li></ul>
-</article></div></main>
-<footer><div class="wrap"><p>© 2026 Farbot. Farbot, Discord Inc. ile bağlantılı değildir.</p><p><a href="privacy.html">Gizlilik Politikası</a> · <a href="terms.html">Kullanım Koşulları</a></p></div></footer>
+      <div class="eyebrow">FARBOT / TERMS OF SERVICE</div>
+
+      <h1>
+        Kullanım<br>
+        <span>Koşulları.</span>
+      </h1>
+
+      <div class="hero-bottom">
+
+        <p class="hero-copy">
+          Farbot'un hangi kurallarla kullanılabileceğini,
+          sunucu yetkililerinin sorumluluklarını ve hizmetin
+          sınırlarını açıkça belirliyoruz.
+        </p>
+
+        <div class="hero-meta">
+          YÜRÜRLÜK &amp; SON GÜNCELLEME
+          <strong>04 / 11 / 2026</strong>
+        </div>
+
+      </div>
+
+      <div class="hero-rule"></div>
+
+    </section>
+
+    <section class="stats reveal" aria-label="Kullanım koşulları özeti">
+
+      <div class="stat">
+        <span class="stat-label">Erişim modeli</span>
+        <span class="stat-value">Yöneticiler ve yetkililer</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-label">Ücretlendirme</span>
+        <span class="stat-value">Tüm özellikler ücretsiz</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-label">Hizmet türü</span>
+        <span class="stat-value">Discord moderasyon aracı</span>
+      </div>
+
+    </section>
+
+    <div class="layout">
+
+      <aside class="toc-wrap reveal">
+
+        <nav class="toc" aria-label="İçindekiler">
+
+          <p class="toc-title">
+            İçindekiler
+            <span>01 — 10</span>
+          </p>
+
+          <ol>
+            <li><a href="#k1"><b>01</b> Kabul ve kapsam</a></li>
+            <li><a href="#k2"><b>02</b> Hizmet</a></li>
+            <li><a href="#k3"><b>03</b> Yetki ve sorumluluk</a></li>
+            <li><a href="#k4"><b>04</b> Kabul edilebilir kullanım</a></li>
+            <li><a href="#k5"><b>05</b> Sunucu yöneticilerinin yükümlülükleri</a></li>
+            <li><a href="#k6"><b>06</b> Veriler</a></li>
+            <li><a href="#k7"><b>07</b> Erişimin kısıtlanması</a></li>
+            <li><a href="#k8"><b>08</b> Garanti reddi</a></li>
+            <li><a href="#k9"><b>09</b> Sorumluluğun sınırı</a></li>
+            <li><a href="#k10"><b>10</b> Değişiklikler, hukuk ve iletişim</a></li>
+          </ol>
+
+          <div class="toc-foot">
+            <span class="dot"></span>
+            OKUMA REHBERİ AKTİF
+          </div>
+
+        </nav>
+
+      </aside>
+
+      <article>
+
+        <section class="summary reveal">
+
+          <p class="summary-kicker">ÖNCE BİLMENİZ GEREKENLER</p>
+
+          <h2>Yetki, sorumluluk ve güvenli kullanım.</h2>
+
+          <ul>
+            <li>Farbot, sunucu moderasyonu için tasarlanmış bir araçtır; komutlara yalnızca gerekli Discord yetkilerine sahip yöneticiler ve yetkililer erişebilir.</li>
+
+            <li>Uyarı, atma ve yasaklama kararlarını sunucu yetkilileri verir; bu kararların sorumluluğu ilgili sunucu yönetimine aittir.</li>
+
+            <li>Botu kötüye kullanmak, başkalarını taciz etmek veya yetki denetimlerini aşmaya çalışmak yasaktır.</li>
+
+            <li>Farbot ücretsiz ve “olduğu gibi” sunulur; bakım, Discord veya barındırma kaynaklı kesintiler yaşanabilir.</li>
+
+            <li>Veri işleme kuralları <a href="privacy.html">Gizlilik Politikası</a>'nda açıklanır.</li>
+          </ul>
+
+        </section>
+
+        <h2 id="k1" class="reveal">1. Kabul ve kapsam</h2>
+
+        <p>
+          Farbot'u bir Discord sunucusuna ekleyen veya botun yetkili
+          komutlarını kullanan kişiler bu koşullara uymayı kabul eder.
+          Farbot'u kullanırken ayrıca Discord'un
+          <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Hizmet Şartları</a>'na,
+          <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Topluluk Yönergeleri</a>'ne
+          ve Geliştirici Politikası'na uymanız gerekir.
+          Koşulları kabul etmiyorsanız botu kullanmayın veya
+          sunucunuzdan çıkarın.
+        </p>
+
+        <p>
+          Hizmeti kullanabilmek için bağlayıcı sözleşme yapabilecek
+          hukuki ehliyete sahip olmanız ve Discord'un asgari yaş
+          şartını karşılamanız gerekir. Botu bir sunucuya ekleyen
+          kişi, o sunucu adına işlem yapmaya yetkili olduğunu kabul eder.
+        </p>
+
+        <h2 id="k2" class="reveal">2. Hizmet</h2>
+
+        <p>
+          Farbot, Discord sunucuları için moderasyon ve yönetim
+          işlevleri sunan bir bottur. Başlıca işlevleri; kullanıcı
+          sorgulama (<code>/sorgu</code>, <code>/profil-sorgu</code>),
+          dereceli uyarılar ve moderatör notları, üye atma ve
+          yasaklama (süreli yasak dahil), bu işlemlerin vaka olarak
+          kaydı, mod-log, etiket koruması ve sunucu ayarlarıdır.
+          Komutların tam listesi <code>/yardim</code> ile görüntülenir.
+        </p>
+
+        <p>
+          Farbot, normal sunucu üyelerinin kullanımına açık bir
+          sohbet botu değildir. Moderasyon ve yönetim komutları,
+          Discord'da gerekli izinlere sahip sunucu yöneticileri
+          ve yetkililer için tasarlanmıştır. Tüm özellikler
+          ücretsizdir; şu anda ücretli bir özellik veya abonelik
+          bölümü bulunmamaktadır.
+        </p>
+
+        <p>
+          Özellikler, önceden bildirilerek veya gerekli görülen
+          durumlarda önceden bildirim yapılmadan değiştirilebilir
+          ya da kaldırılabilir.
+        </p>
+
+        <h2 id="k3" class="reveal">3. Yetki ve sorumluluk</h2>
+
+        <ul>
+          <li>
+            Komutlar, Discord'da ilgili yetkiye sahip kişilere açıktır
+            (ör. Üyeleri At, Üyeleri Yasakla, Üyelere Zaman Aşımı
+            Uygula veya Sunucuyu Yönet). Bu yetkilerin kimlere
+            verileceğine sunucu yönetimi karar verir.
+          </li>
+
+          <li>
+            Uyarı, zaman aşımı, atma ve yasaklama kararlarını sunucu
+            yetkilileri verir; Farbot bu kararları kendiliğinden vermez.
+            Kararların doğruluğundan, gerekçesinden ve sonuçlarından
+            kararı veren yetkili ile ilgili sunucu yönetimi sorumludur.
+          </li>
+
+          <li>
+            Atma ve yasaklama işlemleri bir kullanıcıyı sunucudan
+            uzaklaştırır. Farbot onay adımı sunsa da bu işlemlerin
+            yanlış uygulanmasından doğan sonuçlar bot sahibine yüklenemez.
+          </li>
+
+          <li>
+            Bir karara itiraz etmek isteyen kullanıcı, öncelikle
+            kararı veren sunucu yönetimine başvurmalıdır. Bot sahibi,
+            sunucuların kendi moderasyon kararlarında taraf değildir.
+          </li>
+        </ul>
+
+        <h2 id="k4" class="reveal">4. Kabul edilebilir kullanım</h2>
+
+        <p>
+          Farbot'u kullanan kişiler aşağıdaki davranışlarda bulunamaz:
+        </p>
+
+        <ul>
+          <li>
+            Botu hukuka, Discord kurallarına veya üçüncü kişilerin
+            haklarına aykırı amaçlarla kullanmak.
+          </li>
+
+          <li>
+            Uyarı, atma, yasaklama veya sorgu komutlarını taciz,
+            ayrımcılık, misilleme ya da haksız yere cezalandırma
+            amacıyla kullanmak.
+          </li>
+
+          <li>
+            Komut parametrelerine hakaret, tehdit, hukuka aykırı
+            veya başkalarının kişisel verilerini (ör. kimlik,
+            adres, telefon) içeren metinler yazmak.
+          </li>
+
+          <li>
+            Botu otomatik veya toplu isteklerle zorlamak;
+            bekleme sürelerini ve yetki denetimlerini aşmaya
+            çalışmak; altyapıya, kaynak koda veya başkalarının
+            verilerine yetkisiz erişmeye çalışmak ya da güvenlik
+            açıklarını kötüye kullanmak.
+          </li>
+
+          <li>
+            Hizmeti yetkisiz biçimde ticari amaçla yeniden sunmak
+            veya üçüncü kişilerin kişisel verilerini hukuka aykırı
+            biçimde toplamak ya da izlemek için kullanmak.
+          </li>
+
+          <li>
+            Botun adını veya görünümünü taklit ederek başkalarını
+            yanıltmak.
+          </li>
+        </ul>
+
+        <h2 id="k5" class="reveal">5. Sunucu yöneticilerinin yükümlülükleri</h2>
+
+        <ul>
+          <li>
+            Botu ekleyen ve yapılandıran yönetici, üyelerini
+            moderasyon kayıtlarının tutulması hakkında bilgilendirmeli
+            ve <a href="privacy.html">Gizlilik Politikası</a>'na
+            erişebilmelerini sağlamalıdır.
+          </li>
+
+          <li>
+            Yönetici, yetkililerinin Farbot'u yürürlükteki mevzuata
+            ve bu koşullara uygun kullanmasını sağlar; yetkileri ve
+            rol sıralamasını dikkatle yönetir.
+          </li>
+
+          <li>
+            Botun düzgün çalışması için ihtiyaç duyduğu izinlerin
+            (ör. Mesajları Yönet, Üyeleri At veya Üyeleri Yasakla)
+            verilmesi ve bot rolünün yönetilen üyelerin rollerinin
+            üstünde olması sunucu yönetiminin sorumluluğundadır.
+          </li>
+
+          <li>
+            Yönetici, etkinlik takibi ve etiket koruması gibi
+            özellikleri sunucusunun ihtiyacına göre açar veya kapatır.
+          </li>
+        </ul>
+
+        <h2 id="k6" class="reveal">6. Veriler</h2>
+
+        <p>
+          Farbot'un hangi verileri işlediği, bu verileri ne kadar
+          süre sakladığı, kimlerle paylaştığı ve kullanıcıların
+          başvuru hakları
+          <a href="privacy.html">Gizlilik Politikası</a>'nda
+          açıklanmıştır. Gizlilik Politikası, veri işleme konularında
+          bu koşullarla birlikte değerlendirilir.
+        </p>
+
+        <p>
+          Bir güvenlik açığı tespit ederseniz bunu bu sayfanın
+          sonundaki iletişim bilgileri üzerinden bildirmenizi
+          rica ederiz.
+        </p>
+
+        <h2 id="k7" class="reveal">7. Erişimin kısıtlanması</h2>
+
+        <p>
+          Bot sahibi; bu koşulların, Discord kurallarının veya
+          yürürlükteki hukukun ihlali, kötüye kullanım ya da
+          altyapıya zarar verme durumu söz konusu olduğunda bir
+          kullanıcının veya sunucunun Farbot'a erişimini
+          kısıtlayabilir veya sonlandırabilir. Gerekli durumlarda
+          bu işlem önceden bildirim yapılmadan gerçekleştirilebilir.
+        </p>
+
+        <p>
+          Sunucu yönetimi botu istediği zaman kendi sunucusundan
+          çıkarabilir. Bot çıkarıldığında ilgili sunucu verilerinin
+          silinme süreci ve saklama istisnaları
+          <a href="privacy.html">Gizlilik Politikası</a>'nda
+          açıklanmıştır.
+        </p>
+
+        <h2 id="k8" class="reveal">8. Garanti reddi</h2>
+
+        <p>
+          Farbot ücretsiz ve “olduğu gibi” sunulur. Kesintisiz,
+          hatasız veya belirli bir süre içinde çalışacağına dair
+          garanti verilmez. Bakım, Discord altyapısı veya barındırma
+          ortamından kaynaklanan kesintiler yaşanabilir; bu durumda
+          komutlar çalışmayabilir ve süreli yasakların kaldırılması
+          bot yeniden çalışır duruma gelene kadar gecikebilir.
+          Veriler düzenli olarak yedeklenir ancak kaybolmayacağı
+          garanti edilmez; önemli kararlarınız için kendi
+          kayıtlarınızı da tutmanız önerilir.
+        </p>
+
+        <p>
+          Farbot, Discord API'si üzerinden çalışır ve Discord'un
+          işleyişine bağımlıdır. Discord'daki kesintiler, API
+          değişiklikleri veya kısıtlamalar Hizmeti kısmen ya da
+          tamamen etkileyebilir.
+        </p>
+
+        <p>
+          Farbot'un bot uygulaması Wispbyte çalışma/barındırma
+          ortamında çalışır. Farbot'un veritabanı ve yedekleri
+          Wispbyte üzerinde tutulmaz; ayrı veri depolama altyapısı
+          kullanılır. Discord ve Wispbyte hizmetleri kendi
+          koşullarına tabidir; Farbot bu sağlayıcıların kendi
+          hizmetlerinden kaynaklanan kesintileri kontrol edemez.
+        </p>
+
+        <h2 id="k9" class="reveal">9. Sorumluluğun sınırı</h2>
+
+        <p>
+          Yürürlükteki mevzuatın izin verdiği ölçüde, bot sahibi
+          Hizmetin kullanımından veya kullanılamamasından doğan
+          dolaylı zararlardan, kâr ve veri kaybından, sunucu
+          yetkililerinin verdiği moderasyon kararlarından ve Discord
+          veya barındırma sağlayıcısından kaynaklanan kesintilerden
+          sorumlu tutulamaz. Kasıt ve ağır kusur hâlleri ile
+          mevzuatın sınırlandırılmasına izin vermediği sorumluluklar
+          bu sınırın dışındadır.
+        </p>
+
+        <h2 id="k10" class="reveal">10. Değişiklikler, hukuk ve iletişim</h2>
+
+        <p>
+          Bu koşullar, Hizmetteki veya mevzuattaki değişikliklere
+          göre güncellenebilir. Güncel sürüm bu sayfadadır ve
+          yürürlük tarihi sayfanın başında belirtilir. Önemli
+          değişiklikler destek sunucusunda duyurulur. Değişiklikten
+          sonra Farbot'u kullanmaya devam etmeniz, güncellenmiş
+          koşulları kabul ettiğiniz anlamına gelir.
+        </p>
+
+        <p>
+          Bu koşullara Türkiye Cumhuriyeti hukuku uygulanır;
+          tüketici mevzuatından doğan zorunlu haklarınız ve
+          kanunen geçerli yetki kuralları saklıdır.
+        </p>
+
+        <ul>
+          <li>Bot sahibi: Nefix</li>
+          <li>
+            E-posta:
+            <a href="mailto:officialnefix@gmail.com">officialnefix@gmail.com</a>
+          </li>
+          <li>
+            Destek sunucusu:
+            <a href="https://discord.gg/WU86GBBxXX"
+               target="_blank"
+               rel="noopener noreferrer">discord.gg/WU86GBBxXX</a>
+          </li>
+        </ul>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+
+      <div>
+        <span class="footer-brand">FARBOT</span><br>
+        © 2026 Farbot. Farbot, Discord Inc. ile bağlantılı değildir.
+      </div>
+
+      <nav class="footer-links" aria-label="Alt menü">
+        <a href="privacy.html">Gizlilik Politikası</a>
+        <a href="terms.html">Kullanım Koşulları</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <button
+    class="back-top"
+    id="backTop"
+    type="button"
+    aria-label="Sayfanın başına dön"
+    title="Başa dön"
+  >↑</button>
+
+  <script>
+    (() => {
+      const progress = document.getElementById('progress');
+      const backTop = document.getElementById('backTop');
+
+      const links = [
+        ...document.querySelectorAll('.toc a')
+      ];
+
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+      const reduceMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+
+      function updateScrollUI() {
+        const total =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        const percent = total > 0
+          ? (window.scrollY / total) * 100
+          : 0;
+
+        progress.style.width = `${Math.min(100, percent)}%`;
+
+        backTop.classList.toggle(
+          'visible',
+          window.scrollY > 480
+        );
+      }
+
+      window.addEventListener(
+        'scroll',
+        updateScrollUI,
+        { passive: true }
+      );
+
+      updateScrollUI();
+
+      backTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+      });
+
+      if ('IntersectionObserver' in window && !reduceMotion) {
+
+        const revealObserver = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: .08,
+            rootMargin: '0px 0px -30px 0px'
+          }
+        );
+
+        document
+          .querySelectorAll('.reveal')
+          .forEach(element => revealObserver.observe(element));
+
+        const sectionObserver = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+
+              links.forEach(link => {
+                link.classList.toggle(
+                  'active',
+                  link.getAttribute('href') === `#${entry.target.id}`
+                );
+              });
+            });
+          },
+          {
+            rootMargin: '-18% 0px -68% 0px',
+            threshold: 0
+          }
+        );
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+      } else {
+        document
+          .querySelectorAll('.reveal')
+          .forEach(element => element.classList.add('is-visible'));
+      }
+
+    })();
+  </script>
+
 </body>
 </html>
