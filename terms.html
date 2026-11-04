@@ -1,162 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kullanım Koşulları | Farbot</title>
-<meta name="description" content="Farbot Discord botunun kullanımına ilişkin Kullanım Koşulları.">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0a0d13">
+<meta name="description" content="Farbot Discord moderasyon botunun kullanım koşulları: yetki, sorumluluk, kabul edilebilir kullanım ve hizmet şartları.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%232f4b8f%27/%3E%3Cpath d=%27M10 9h13v4h-8v3h7v4h-7v4h-5z%27 fill=%27white%27/%3E%3C/svg%3E">
 <style>
-:root{--bg:#0a0d13;--s:#111621;--s2:#171d2a;--b:#232b3b;--t:#e8ebf2;--p:#cdd3e0;--m:#a1abc0;--a:#8da6f7;color-scheme:dark}
+:root{--bg:#f7f8fa;--ink:#16202e;--mut:#556070;--rule:#d7dce5;--acc:#2f4b8f;--box:#eceff6;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0f141c;--ink:#e6eaf1;--mut:#9aa6b8;--rule:#263041;--acc:#93aaf0;--box:#161d29}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{margin:0;background:var(--bg);color:var(--t);font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
-a{color:var(--a);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--a);color:#0a0d13;padding:8px 14px;border-radius:6px;z-index:9}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.8 Georgia,"Iowan Old Style","Source Serif 4",serif;-webkit-text-size-adjust:100%}
+header,nav,footer,h1,h2,th,.meta,.toc{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--bg);padding:8px 14px;border-radius:6px}
 .skip:focus{left:8px}
-.w{max-width:880px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--b);background:linear-gradient(180deg,#131a28,var(--bg));padding:28px 0 44px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:44px}
-.brand{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.9rem;color:var(--t)}
-.brand:before{content:"";display:inline-block;width:10px;height:10px;margin-right:10px;background:var(--a);border-radius:2px}
-.top a{color:var(--m);font-size:.9rem}
-h1{font-size:clamp(1.9rem,5vw,2.75rem);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
-.lead{color:var(--m);max-width:62ch;margin:0 0 22px}
-.meta{display:inline-block;border:1px solid var(--b);border-radius:999px;padding:4px 14px;font-size:.85rem;color:var(--m)}
-main{padding:36px 0 20px}
-.toc,.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:26px;margin-bottom:18px}
-.toc h2{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin:0 0 14px}
-.toc ol{margin:0;padding-left:26px;columns:2;column-gap:36px}
-.toc li{padding:3px 0;break-inside:avoid}
-.card h2{display:flex;gap:14px;align-items:center;font-size:1.2rem;line-height:1.35;margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--b)}
-.n{flex:none;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--b);border-radius:8px;background:var(--s2);color:var(--a);font-size:.85rem;font-weight:600}
-.card p,.card ul{margin:0 0 12px;color:var(--p)}
-.card ul{padding-left:20px}
-.card li{margin-bottom:6px}
-.card>:last-child{margin-bottom:0}
-.ph{background:#3b3114;color:#f5dd94;padding:0 5px;border-radius:4px}
-footer{border-top:1px solid var(--b);margin-top:24px;padding:36px 0 28px;color:var(--m);font-size:.92rem}
-.fg{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-footer h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px;color:var(--t)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+.brand{font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+nav a{margin-left:20px;color:var(--mut);text-decoration:none;font-size:.95rem}
+nav a[aria-current]{color:var(--ink);font-weight:600;border-bottom:2px solid var(--acc);padding-bottom:3px}
+.hero{padding:48px 0 8px}
+h1{font-size:clamp(1.9rem,4.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+.meta{color:var(--mut);font-size:.92rem;margin:0}
+.page{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;padding:32px 0 72px}
+.toc{position:sticky;top:24px;align-self:start;font-size:.92rem}
+.toc p{margin:0 0 8px;font-weight:600}
+.toc ol{margin:0;padding:0;list-style:none;border-left:1px solid var(--rule)}
+.toc a{display:block;padding:5px 0 5px 14px;color:var(--mut);text-decoration:none}
+.toc a:hover{color:var(--acc)}
+article{max-width:760px}
+article>p,article>ul{max-width:70ch}
+.summary{background:var(--box);border-left:4px solid var(--acc);padding:18px 22px;margin:0 0 40px;border-radius:0 8px 8px 0}
+.summary h2{margin:0 0 8px;font-size:1.05rem}
+.summary ul{margin:0;padding-left:20px}
+h2{font-size:1.3rem;line-height:1.3;margin:44px 0 12px;padding-top:24px;border-top:1px solid var(--rule)}
+h2:first-of-type{margin-top:0}
+.summary h2{border:0;padding:0}
+p,ul,ol.l{margin:0 0 14px}
+li{margin-bottom:6px}
+.tw{overflow-x:auto;margin:0 0 18px;border:1px solid var(--rule);border-radius:8px}
+table{width:100%;border-collapse:collapse;font:.93rem/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-width:560px}
+code{overflow-wrap:anywhere}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--rule)}
+th{background:var(--box);font-weight:600}
+tr:last-child td{border-bottom:0}
+footer{border-top:1px solid var(--rule);color:var(--mut);font-size:.9rem;padding:28px 0 40px}
 footer p{margin:0 0 6px}
-.cp{border-top:1px solid var(--b);margin-top:26px;padding-top:18px;font-size:.85rem}
-@media(max-width:640px){.toc ol{columns:1}.toc,.card{padding:20px}}
+@media(max-width:860px){.page{grid-template-columns:minmax(0,1fr);gap:24px}.toc{position:static}}
+@media print{header,.toc,.skip{display:none}body{background:#fff;color:#000;font-size:11pt}a{color:#000}.page{display:block}}
 </style>
 </head>
 <body>
 <a class="skip" href="#icerik">Ana içeriğe geç</a>
-<header>
-<div class="w">
-<div class="top"><span class="brand">Farbot</span><a href="privacy.html">Gizlilik Politikası</a></div>
-<h1>Kullanım Koşulları</h1>
-<p class="lead">Bu belge, Farbot Discord botunun ve ilgili otomasyon hizmetlerinin kullanımına ilişkin hak, yükümlülük ve kuralları düzenler.</p>
-<span class="meta">Son güncelleme: <mark class="ph">26.10.2026</mark></span>
-</div>
-</header>
-<main id="icerik" class="w">
-<nav class="toc" aria-label="İçindekiler">
-<h2>İçindekiler</h2>
-<ol>
-<li><a href="#m1">Koşulların Kabulü</a></li>
-<li><a href="#m2">Hizmetin Tanımı ve Kapsamı</a></li>
-<li><a href="#m3">Kullanıcıların Sorumlulukları</a></li>
-<li><a href="#m4">Yasaklanmış Kullanımlar</a></li>
-<li><a href="#m5">Discord Platformu ve Üçüncü Taraf Hizmetleri</a></li>
-<li><a href="#m6">Hizmetin Kullanılabilirliği ve Değişiklikler</a></li>
-<li><a href="#m7">Veri Güvenliği ve Gizlilik</a></li>
-<li><a href="#m8">Sorumluluk Sınırlamaları</a></li>
-<li><a href="#m9">Hizmetin Askıya Alınması ve Sonlandırılması</a></li>
-<li><a href="#m10">Koşulların Güncellenmesi ve İletişim</a></li>
-</ol>
-</nav>
+<header><div class="wrap"><a class="brand" href="privacy.html">Farbot</a>
+<nav aria-label="Yasal belgeler"><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html" aria-current="page">Kullanım Koşulları</a></nav></div></header>
+<main class="wrap" id="icerik">
+<div class="hero"><h1>Kullanım Koşulları</h1><p class="meta">Yürürlük ve son güncelleme tarihi: 4 Kasım 2026</p></div>
+<div class="page">
+<nav class="toc" aria-label="İçindekiler"><p>İçindekiler</p><ol>
+<li><a href="#k1">Kabul ve kapsam</a></li><li><a href="#k2">Hizmet</a></li><li><a href="#k3">Yetki ve sorumluluk</a></li>
+<li><a href="#k4">Kabul edilebilir kullanım</a></li><li><a href="#k5">Sunucu yöneticilerinin yükümlülükleri</a></li><li><a href="#k6">Veriler</a></li>
+<li><a href="#k7">Erişimin kısıtlanması</a></li><li><a href="#k8">Garanti reddi</a></li><li><a href="#k9">Sorumluluğun sınırı</a></li><li><a href="#k10">Değişiklikler, hukuk ve iletişim</a></li></ol></nav>
+<article>
+<section class="summary"><h2>Kısaca</h2><ul>
+<li>Farbot bir araçtır: uyarı, at ve yasak kararlarını <strong>sunucu yetkilileri</strong> verir ve bunlardan onlar sorumludur.</li>
+<li>Botu kötüye kullanmak veya başkalarını taciz etmek için kullanmak yasaktır.</li>
+<li>Hizmet ücretsiz ve "olduğu gibi" sunulur; kesinti olabilir.</li>
+<li>Veri işleme kuralları <a href="privacy.html">Gizlilik Politikası</a>'ndadır.</li></ul></section>
 
-<section class="card" id="m1">
-<h2><span class="n">1</span>Koşulların Kabulü</h2>
-<p>Bu Kullanım Koşulları (“Koşullar”), Farbot’un (“Hizmet”) bir Discord sunucusuna eklenmesi, komutlarının veya özelliklerinin kullanılması ya da Hizmet ile herhangi bir biçimde etkileşime girilmesi hâlinde geçerli olur. Hizmeti kullanarak Koşulları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan edersiniz. Koşulları kabul etmiyorsanız Hizmeti kullanmamalı ve botu sunucunuzdan çıkarmalısınız.</p>
-<p>Botu bir sunucuya ekleyen kişi, o sunucu adına işlem yapmaya yetkili olduğunu kabul eder. Hizmeti kullanabilmek için bağlayıcı sözleşme yapabilecek hukuki ehliyete sahip olmanız ve Discord’un getirdiği asgari yaş koşulunu karşılamanız gerekir. Bu Koşullar, Discord Hizmet Şartları ve Topluluk Yönergeleri’ne ek olarak uygulanır.</p>
-</section>
+<h2 id="k1">1. Kabul ve kapsam</h2>
+<p>Farbot'u bir sunucuya ekleyerek veya komutlarını kullanarak bu koşulları kabul etmiş olursunuz. Farbot'u kullanırken ayrıca Discord'un <a href="https://discord.com/terms">Hizmet Şartları</a>'na, <a href="https://discord.com/guidelines">Topluluk Yönergeleri</a>'ne ve Geliştirici Politikası'na uymanız gerekir. Koşulları kabul etmiyorsanız botu kullanmayın veya sunucunuzdan çıkarın.</p>
+<p>Hizmeti kullanabilmek için bağlayıcı sözleşme yapabilecek hukuki ehliyete sahip olmanız ve Discord'un asgari yaş şartını karşılamanız gerekir. Botu bir sunucuya ekleyen kişi, o sunucu adına işlem yapmaya yetkili olduğunu kabul eder.</p>
 
-<section class="card" id="m2">
-<h2><span class="n">2</span>Hizmetin Tanımı ve Kapsamı</h2>
-<p>Farbot, Discord sunucularında bot hizmetleri ve otomasyon özellikleri sunan bir uygulamadır. Hizmet; komutlar, etkileşimler ve sunucu yöneticilerinin yapılandırabildiği otomasyon işlevleri aracılığıyla sağlanır. Güncel özellik kapsamı: <mark class="ph">Yalnızca sunucu yöneticileri için tasarlanmış yönetim ve otomasyon özellikleri. Ayrıntılı komut listesi belirtilmemiştir.</mark>.</p>
-<p>Özellikler zaman içinde eklenebilir, değiştirilebilir veya kaldırılabilir. Hizmet, tanımlanan kapsamda sunulur; belirli bir sonucun elde edileceği veya Hizmetin her ihtiyaca uygun olacağı taahhüt edilmez. Hizmetin ücretli bir bölümü varsa buna ilişkin koşullar: <mark class="ph">Yoktur; tüm özellikler yöneticiler için ücretsizdir.</mark>.</p>
-</section>
+<h2 id="k2">2. Hizmet</h2>
+<p>Farbot, Discord sunucuları için şu işlevleri sunan bir moderasyon botudur: kullanıcı sorgulama (<code>/sorgu</code>, <code>/profil-sorgu</code>), dereceli uyarı ve moderatör notları, üye atma ve yasaklama (süreli yasak dahil) ve bunların vaka olarak kaydı, mod-log, etiket koruması ve sunucu ayarları. Komutların tam listesi <code>/yardim</code> ile görüntülenir. Tüm özellikler sunucu yöneticileri için ücretsizdir; ücretli bir bölüm sunulursa koşulları ayrıca duyurulur. Özellikler önceden bildirilerek veya bildirilmeden değiştirilebilir ya da kaldırılabilir.</p>
 
-<section class="card" id="m3">
-<h2><span class="n">3</span>Kullanıcıların Sorumlulukları</h2>
-<p>Hizmeti kullanırken aşağıdaki yükümlülüklere uymayı kabul edersiniz:</p>
+<h2 id="k3">3. Yetki ve sorumluluk</h2>
 <ul>
-<li>Yürürlükteki mevzuata, Discord Hizmet Şartları’na ve Topluluk Yönergeleri’ne uygun davranmak.</li>
-<li>Hesabınızın ve sunucunuzdaki yönetici yetkilerinin güvenliğinden sorumlu olmak; botun yetkilerini yalnızca gerekli ölçüde ve bilinçli biçimde yapılandırmak.</li>
-<li>Sunucu yöneticisi iseniz, botun sunucunuzda işlediği veriler hakkında üyelerinizi uygulanabilir mevzuata uygun şekilde bilgilendirmek ve gerekli hukuki dayanakları sağlamak.</li>
-<li>Komutlara girdiğiniz içeriklerin doğruluğundan ve hukuka uygunluğundan sorumlu olmak; komutlara gereksiz yere kişisel veya hassas bilgi girmemek.</li>
-<li>Tespit ettiğiniz hataları ve güvenlik açıklarını iletişim kanallarımız üzerinden bildirmek.</li>
-</ul>
-</section>
+<li>Komutlar, Discord'da ilgili yetkiye sahip kişilere açıktır (ör. Üyeleri At, Üyeleri Yasakla, Üyelere Zaman Aşımı Uygula, Sunucuyu Yönet). Bu yetkilerin kimlere verileceğine sunucu yönetimi karar verir.</li>
+<li>Uyarı, zaman aşımı, at ve yasak kararlarını yetkililer verir; Farbot bu kararları kendiliğinden vermez. Kararların doğruluğundan, gerekçesinden ve sonuçlarından bu kararı veren yetkili ve sunucu yönetimi sorumludur.</li>
+<li>At ve yasak işlemleri bir kullanıcıyı sunucudan uzaklaştırır; Farbot onay adımı sunsa da bu işlemlerin yanlış uygulanmasından doğan sonuçlar bot sahibine yüklenemez.</li>
+<li>Bir karara itiraz etmek isteyen kullanıcı, öncelikle kararı veren sunucu yönetimine başvurmalıdır. Bot sahibi sunucuların iç kararlarında taraf değildir.</li></ul>
 
-<section class="card" id="m4">
-<h2><span class="n">4</span>Yasaklanmış Kullanımlar</h2>
-<p>Hizmetin aşağıdaki amaçlarla kullanılması yasaktır:</p>
+<h2 id="k4">4. Kabul edilebilir kullanım</h2>
+<p>Aşağıdakiler yasaktır:</p>
 <ul>
-<li>Hukuka veya Discord kurallarına aykırı faaliyetler yürütmek; taciz, tehdit, nefret söylemi, dolandırıcılık veya yasa dışı içerik yaymak.</li>
-<li>Hizmetin altyapısına, kaynak koduna veya diğer kullanıcıların verilerine yetkisiz erişmeye çalışmak; güvenlik açıklarını kötüye kullanmak.</li>
-<li>Botu aşırı yükleyecek, spam üretecek veya Discord’un hız sınırlarını aşmaya yönelik otomatik ya da kötü niyetli kullanım yapmak.</li>
-<li>Üçüncü kişilerin kişisel verilerini hukuka aykırı biçimde toplamak, izlemek veya ifşa etmek amacıyla Hizmeti kullanmak.</li>
-<li>Hizmetin işleyişini bozmak, başkalarının Hizmetten yararlanmasını engellemek veya Hizmeti yetkisiz biçimde ticari amaçla yeniden sunmak.</li>
-</ul>
-<p>Bu yasakların ihlali hâlinde 9. maddede düzenlenen tedbirler uygulanabilir.</p>
-</section>
+<li>Botu hukuka, Discord kurallarına veya üçüncü kişilerin haklarına aykırı amaçlarla kullanmak.</li>
+<li>Uyarı, at, yasak veya sorgu komutlarını taciz, ayrımcılık, misilleme ya da haksız yere cezalandırma amacıyla kullanmak.</li>
+<li>Komut parametrelerine hakaret, tehdit, hukuka aykırı veya başkalarının kişisel verilerini (ör. kimlik, adres, telefon) içeren metinler yazmak.</li>
+<li>Botu otomatik veya toplu isteklerle zorlamak, bekleme sürelerini ve yetki denetimlerini aşmaya çalışmak; altyapıya, kaynak koda veya başkalarının verilerine yetkisiz erişmeye çalışmak ve güvenlik açıklarını kötüye kullanmak.</li>
+<li>Hizmeti yetkisiz biçimde ticari amaçla yeniden sunmak veya üçüncü kişilerin kişisel verilerini hukuka aykırı biçimde toplamak ya da izlemek için kullanmak.</li>
+<li>Botun adını veya görünümünü taklit ederek başkalarını yanıltmak.</li></ul>
 
-<section class="card" id="m5">
-<h2><span class="n">5</span>Discord Platformu ve Üçüncü Taraf Hizmetleri</h2>
-<p>Farbot, Discord API’si üzerinden çalışır ve Discord’un işleyişine bağımlıdır. Farbot bağımsız olarak geliştirilmiş ve işletilmektedir; Discord Inc. ile bağlantılı değildir. Discord’un kendi hizmet şartları ve gizlilik politikası ayrıca geçerlidir ve Farbot bunların içeriğinden veya uygulanmasından sorumlu değildir.</p>
-<p>Discord tarafındaki kesintiler, API değişiklikleri, kısıtlamalar veya politika güncellemeleri Hizmetin bir kısmını ya da tamamını etkileyebilir. Hizmetin sunumunda kullanılan üçüncü taraf altyapı veya yazılım sağlayıcıları: <mark class="ph">Barındırma: Wispbyte. Başka bir üçüncü taraf hizmet belirtilmemiştir.</mark>. Üçüncü tarafların hizmetleri kendi koşullarına tabidir.</p>
-</section>
+<h2 id="k5">5. Sunucu yöneticilerinin yükümlülükleri</h2>
+<ul>
+<li>Botu ekleyen ve yapılandıran yönetici, üyelerine moderasyon kayıtlarının tutulduğunu ve <a href="privacy.html">Gizlilik Politikası</a>'nı bildirmekle yükümlüdür.</li>
+<li>Yönetici, yetkililerinin Farbot'u yürürlükteki mevzuata ve bu koşullara uygun kullanmasını sağlar, yetkileri ve rol sıralamasını dikkatle yönetir.</li>
+<li>Botun düzgün çalışması için ihtiyaç duyduğu yetkilerin (ör. Mesajları Yönet, Üyeleri At/Yasakla) verilmesi ve bot rolünün yönetilen üyelerin rollerinin üstünde olması yöneticinin sorumluluğundadır.</li>
+<li>Yönetici, etkinlik takibi ve etiket koruması gibi özellikleri sunucusunun ihtiyacına göre açar veya kapatır.</li></ul>
 
-<section class="card" id="m6">
-<h2><span class="n">6</span>Hizmetin Kullanılabilirliği ve Değişiklikler</h2>
-<p>Hizmetin kesintisiz, hatasız veya her zaman erişilebilir olacağı garanti edilmez. Planlı bakım, güncelleme, teknik arıza, Discord kaynaklı sorunlar veya mücbir sebepler nedeniyle Hizmet geçici olarak kesintiye uğrayabilir. Hizmetin sürekliliği için makul çaba gösterilir.</p>
-<p>Farbot, özellikleri değiştirme, sınırlama veya Hizmeti kısmen ya da tamamen sonlandırma hakkını saklı tutar. Önemli değişiklikler, mümkün olduğunda makul bir süre önceden <mark class="ph">Discord destek sunucusu (https://discord.gg/WU86GBBxXX)</mark> üzerinden duyurulur.</p>
-</section>
+<h2 id="k6">6. Veriler</h2>
+<p>Farbot'un hangi verileri işlediği, ne kadar süre sakladığı ve haklarınız <a href="privacy.html">Gizlilik Politikası</a>'nda açıklanmıştır. Politika bu koşulların ayrılmaz parçasıdır. Bir güvenlik açığı tespit ederseniz bunu bu sayfanın sonundaki iletişim bilgileriyle bildirmenizi rica ederiz.</p>
 
-<section class="card" id="m7">
-<h2><span class="n">7</span>Veri Güvenliği ve Gizlilik</h2>
-<p>Hizmet kapsamında işlenen kişisel veriler, bu Koşulların ayrılmaz bir parçası olan <a href="privacy.html">Gizlilik Politikası</a>’nda açıklanır. Verilerin hangi amaçlarla işlendiği, saklandığı ve hangi haklara sahip olduğunuz o belgede yer alır.</p>
-<p>Farbot, işlenen verilerin korunması için makul teknik ve idari tedbirler almayı hedefler. Bununla birlikte internet üzerinden yapılan hiçbir iletim veya saklama yönteminin mutlak güvenliği garanti edilemez. Bir güvenlik açığı tespit ederseniz, bunu ilgili bölümde belirtilen iletişim bilgileri üzerinden bildirmenizi rica ederiz.</p>
-</section>
+<h2 id="k7">7. Erişimin kısıtlanması</h2>
+<p>Bot sahibi; bu koşulların, Discord kurallarının veya hukukun ihlali, kötüye kullanım ya da altyapıya zarar verme durumunda bir kullanıcının veya sunucunun Farbot'a erişimini önceden bildirmeden kısıtlayabilir veya sonlandırabilir. Sunucu yönetimi botu istediği zaman sunucusundan çıkarabilir; çıkarılan sunucunun verilerinin akıbeti Gizlilik Politikası'ndadır.</p>
 
-<section class="card" id="m8">
-<h2><span class="n">8</span>Sorumluluk Sınırlamaları</h2>
-<p>Hizmet “mevcut hâliyle” sunulur. Yürürlükteki mevzuatın izin verdiği azami ölçüde Farbot; Hizmetin kullanılmasından veya kullanılamamasından doğan dolaylı zararlardan, veri veya kâr kaybından, Discord’dan ya da üçüncü taraflardan kaynaklanan aksaklıklardan ve kullanıcıların kendi yapılandırma, içerik veya eylemlerinden kaynaklanan sonuçlardan sorumlu tutulamaz.</p>
-<p>Bu madde; kasıt ve ağır kusur hâllerinde, tüketici mevzuatı dâhil olmak üzere emredici hükümlerle sorumluluğun sınırlandırılmasına izin verilmeyen durumlarda uygulanmaz. Kanundan doğan haklarınız saklıdır.</p>
-</section>
+<h2 id="k8">8. Garanti reddi</h2>
+<p>Farbot ücretsiz ve "olduğu gibi" sunulur. Kesintisiz, hatasız veya belirli bir süre içinde çalışacağına dair garanti verilmez. Barındırma, Discord altyapısı veya bakım nedenleriyle kesintiler yaşanabilir; bu durumda komutlar çalışmayabilir ve süreli yasakların kaldırılması bot yeniden açılana kadar gecikebilir. Veriler düzenli yedeklenir ancak kaybolmayacağı garanti edilmez; önemli kararlarınız için kendi kayıtlarınızı da tutmanız önerilir.</p>
+<p>Farbot Discord API'si üzerinden çalışır ve Discord'un işleyişine bağımlıdır; Discord'daki kesintiler, API değişiklikleri veya kısıtlamalar Hizmeti kısmen ya da tamamen etkileyebilir. Hizmet, Wispbyte barındırma altyapısında çalışır. Discord ve barındırma sağlayıcısının hizmetleri kendi koşullarına tabidir ve Farbot bunların içeriğinden sorumlu değildir.</p>
 
-<section class="card" id="m9">
-<h2><span class="n">9</span>Hizmetin Askıya Alınması ve Sonlandırılması</h2>
-<p>Koşulların veya Discord kurallarının ihlali, kötüye kullanım şüphesi, güvenlik riski ya da hukuki zorunluluk hâllerinde Farbot; ilgili kullanıcı veya sunucunun Hizmete erişimini geçici ya da kalıcı olarak kısıtlayabilir, askıya alabilir veya sonlandırabilir. Uygun olduğu ve hukuken mümkün olduğu ölçüde gerekçe bildirilir; itirazlarınızı iletişim kanalları üzerinden iletebilirsiniz.</p>
-<p>Siz de botu sunucunuzdan çıkararak Hizmeti dilediğiniz zaman kullanmayı bırakabilirsiniz. Sonlandırma, niteliği gereği devam etmesi gereken hükümleri (sorumluluk, veri ve uyuşmazlık hükümleri dâhil) ortadan kaldırmaz. Sonlandırma sonrası verilerin akıbeti Gizlilik Politikası’na tabidir.</p>
-</section>
+<h2 id="k9">9. Sorumluluğun sınırı</h2>
+<p>Yürürlükteki mevzuatın izin verdiği ölçüde, bot sahibi Hizmetin kullanımından veya kullanılamamasından doğan dolaylı zararlardan, kâr ve veri kaybından, yetkililerin verdiği kararlardan ve Discord veya barındırma sağlayıcısından kaynaklanan kesintilerden sorumlu tutulamaz. Kasıt ve ağır kusur hâlleri ile mevzuatın sınırlandırılmasına izin vermediği sorumluluklar bu sınırın dışındadır.</p>
 
-<section class="card" id="m10">
-<h2><span class="n">10</span>Koşulların Güncellenmesi ve İletişim</h2>
-<p>Farbot, Koşulları yasal, teknik veya operasyonel gerekçelerle güncelleyebilir. Güncel sürümün yürürlük tarihi sayfanın üst bölümünde belirtilir. Önemli değişiklikler <mark class="ph">Discord destek sunucusunda duyuru</mark> aracılığıyla duyurulur. Güncelleme sonrasında Hizmeti kullanmaya devam etmeniz, emredici mevzuat hükümleri saklı kalmak kaydıyla güncel Koşulları kabul ettiğiniz anlamına gelir.</p>
-<p>Bu Koşullara uygulanacak hukuk ve yetkili merci: <mark class="ph">Belirtilmemiştir.</mark>. Tüketici sıfatıyla sahip olduğunuz yasal başvuru hakları saklıdır.</p>
-<p>Sorularınız için: <mark class="ph">officialnefix@gmail.com</mark> adresine veya <mark class="ph">https://discord.gg/WU86GBBxXX</mark> üzerinden ulaşabilirsiniz.</p>
-</section>
-</main>
-
-<footer>
-<div class="w">
-<div class="fg">
-<div><span class="brand">Farbot</span><p style="margin-top:10px">Discord sunucuları için bot hizmetleri ve otomasyon çözümleri.</p></div>
-<div><h3>Yasal</h3><p><a href="privacy.html">Gizlilik Politikası</a></p></div>
-<div><h3>İletişim</h3><p><mark class="ph">officialnefix@gmail.com</mark></p><p><mark class="ph">https://discord.gg/WU86GBBxXX</mark></p></div>
-</div>
-<p class="cp">© Farbot. Tüm hakları saklıdır. Farbot, Discord Inc. ile bağlantılı değildir.</p>
-</div>
-</footer>
+<h2 id="k10">10. Değişiklikler, hukuk ve iletişim</h2>
+<p>Koşullar güncellenebilir. Güncel sürüm bu sayfadadır ve yürürlük tarihi sayfanın başında yazar; önemli değişiklikler destek sunucusunda duyurulur. Değişiklikten sonra botu kullanmaya devam etmeniz yeni koşulları kabul ettiğiniz anlamına gelir. Bu koşullara Türkiye Cumhuriyeti hukuku uygulanır; tüketici mevzuatından doğan zorunlu haklarınız ve yetki kuralları saklıdır.</p>
+<ul><li>Bot sahibi: Nefix</li><li>E-posta: <a href="mailto:officialnefix@gmail.com">officialnefix@gmail.com</a></li><li>Destek sunucusu: <a href="https://discord.gg/WU86GBBxXX">discord.gg/WU86GBBxXX</a></li></ul>
+</article></div></main>
+<footer><div class="wrap"><p>© 2026 Farbot. Farbot, Discord Inc. ile bağlantılı değildir.</p><p><a href="privacy.html">Gizlilik Politikası</a> · <a href="terms.html">Kullanım Koşulları</a></p></div></footer>
 </body>
 </html>
